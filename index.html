@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Mulish:wght@300;400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
 
@@ -19,83 +19,68 @@
 
   <!-- NAV -->
   <nav>
-    <div class="logo-text">
-      De la Garza
-      <span>Law Firm &nbsp;|&nbsp; Fort Worth, TX</span>
-    </div>
-    <a href="#contact-form" class="nav-cta">Free Consultation</a>
+    <a href="/" class="nav-logo-link">
+      <img src="img/Logo.png" alt="De la Garza Law Firm" class="nav-logo" />
+    </a>
+    <a href="tel:2149375077" class="nav-cta">&#128222; &nbsp;Free Consultation: 214-937-5077</a>
   </nav>
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-accent-bar"></div>
 
-    <!-- LEFT: Lawyer photo -->
-    <div class="hero-photo-col">
-      <div class="hero-photo-wrap">
-        <img
-          src="img/lawyer-placeholder.jpg"
-          alt="De la Garza Law Firm Attorney"
-          class="hero-photo"
-          onerror="this.style.display='none'; this.parentElement.classList.add('hero-photo-fallback');"
-        />
-        <div class="hero-photo-placeholder" aria-hidden="true">
-          <svg viewBox="0 0 160 200" xmlns="http://www.w3.org/2000/svg" width="120">
-            <circle cx="80" cy="65" r="42" fill="rgba(255,255,255,0.15)"/>
-            <ellipse cx="80" cy="175" rx="65" ry="50" fill="rgba(255,255,255,0.1)"/>
-          </svg>
-          <span>Attorney Photo</span>
-        </div>
-        <div class="hero-photo-badge">
-          <span class="badge-main">Free<br>Case Review</span>
-          <span class="badge-sub">No Fee Unless We Win</span>
-        </div>
+    <!-- Full-width background (replace div with img tag when photo is ready) -->
+    <div class="hero-bg">
+      <div class="hero-bg-placeholder">
+        <svg viewBox="0 0 300 500" xmlns="http://www.w3.org/2000/svg" width="260" opacity="0.15">
+          <circle cx="150" cy="140" r="90" fill="#fff"/>
+          <ellipse cx="150" cy="420" rx="160" ry="120" fill="#fff"/>
+        </svg>
+        <span class="hero-bg-label">Attorney Photo Goes Here</span>
       </div>
+      <div class="hero-bg-overlay"></div>
     </div>
 
-    <!-- CENTER: Headline & copy -->
+    <!-- LEFT: Headline overlaid on photo -->
     <div class="hero-content">
       <div class="hero-eyebrow">Personal Injury Attorneys &bull; Fort Worth, TX</div>
-      <h1>Have You Been<br>Injured in a<br><em>Car Accident?</em></h1>
+      <h1>Have You Been<br>Injured in a<br><strong>Car Accident?</strong></h1>
       <p class="hero-sub">
-        You deserve powerful representation — not a settlement that barely covers your bills.
-        Our attorneys fight aggressively so you can focus on recovering.
+        De la Garza Law Firm fights aggressively for injury victims across Texas.
+        No fees unless we win.
       </p>
       <div class="hero-trust">
         <div class="hero-trust-item">&#10003; No Fee Unless We Win</div>
         <div class="hero-trust-item">&#10003; Free Consultation</div>
         <div class="hero-trust-item">&#10003; Se Habla Español</div>
       </div>
-      <a href="tel:2149375077" class="btn-outline hero-phone-btn">&#128222; &nbsp;214-937-5077</a>
     </div>
 
-    <!-- RIGHT: Hero form -->
+    <!-- RIGHT: Floating form card -->
     <div class="hero-form-col">
       <div class="hero-form-card">
-        <p class="hero-form-title">Get Your <strong>Free Case Review</strong></p>
-        <form class="hero-form" id="heroForm" novalidate>
+        <div class="hero-form-header">
+          <span class="hero-form-dot"></span>
+          We are available to assist you 24 hours a day!
+        </div>
+        <p class="hero-form-title">Free Consultation</p>
+        <form class="contact-form" id="heroForm" novalidate>
           <div class="form-group">
-            <label for="hFirstName">First Name *</label>
-            <input type="text" id="hFirstName" name="firstName" placeholder="Maria" required />
+            <label for="hName">Full Name *</label>
+            <input type="text" id="hName" name="name" placeholder="John Smith" required />
           </div>
           <div class="form-group">
-            <label for="hLastName">Last Name *</label>
-            <input type="text" id="hLastName" name="lastName" placeholder="Gonzalez" required />
+            <label for="hEmail">Email Address *</label>
+            <input type="email" id="hEmail" name="email" placeholder="Email@example.com" required />
           </div>
           <div class="form-group">
             <label for="hPhone">Phone Number *</label>
-            <input type="tel" id="hPhone" name="phone" placeholder="(214) 000-0000" required />
+            <input type="tel" id="hPhone" name="phone" placeholder="123-456-7890" required />
           </div>
           <div class="form-group">
-            <label for="hEmail">Email Address</label>
-            <input type="email" id="hEmail" name="email" placeholder="your@email.com" />
+            <label for="hDescription">Message *</label>
+            <textarea id="hDescription" name="description" rows="3" placeholder="Describe Your Case" required></textarea>
           </div>
-          <div class="form-group">
-            <label for="hDescription">Briefly Describe Your Accident *</label>
-            <textarea id="hDescription" name="description" rows="3" placeholder="What happened? When and where?" required></textarea>
-          </div>
-          <p class="form-disclaimer">Confidential &bull; Attorney-Client Privilege &bull; No Obligation</p>
-          <button type="submit" class="form-submit">Get My Free Case Review &rarr;</button>
+          <button type="submit" class="form-submit hero-form-submit">Send Message</button>
           <div class="success-msg" id="heroSuccessMsg">
             &#10003; Thank you! We'll be in touch shortly.
           </div>
@@ -249,10 +234,7 @@
   <footer>
     <div class="footer-inner">
       <div class="footer-brand">
-        <div class="logo-text">
-          De la Garza Law Firm
-          <span>Fort Worth Personal Injury Lawyers</span>
-        </div>
+        <img src="img/White--logo.png" alt="De la Garza Law Firm" class="footer-logo" />
         <p class="footer-tagline">Allies &bull; Advocates &bull; Advisors</p>
       </div>
       <div class="footer-info">
@@ -278,6 +260,6 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
