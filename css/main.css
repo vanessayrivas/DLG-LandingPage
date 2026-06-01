@@ -8,7 +8,7 @@
 :root {
   --blue:        #1a3a6b;   /* primary dark navy blue */
   --blue-mid:    #2a549c;   /* medium blue for accents */
-  --blue-light:  #ffffff;   /* soft blue tint for backgrounds */
+  --blue-light:  #dde8f7;   /* soft blue tint for backgrounds */
   --blue-xlight: #f0f5fc;   /* very light blue for section bgs */
   --gold:        #c9a84c;   /* gold accent */
   --gold-light:  #e2c070;
@@ -87,7 +87,7 @@ nav {
 }
 
 .nav-logo {
-  height: 60px;
+  height: 300px;
   width: auto;
   display: block;
 }
@@ -611,7 +611,7 @@ nav {
   outline: none;
   transition: border-color 0.2s, box-shadow 0.2s;
   width: 100%;
-
+  -webkit-appearance: none;
   border-radius: 0;
 }
 
